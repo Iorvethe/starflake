@@ -10,18 +10,18 @@
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
+  # Grub bootloader
   boot.loader = {
+    efi.canTouchEfiVariables = true;
     grub = {
       enable = true;
       device = "nodev";
-      useOSProber = true;
       efiSupport = true;
+      useOSProber = true;  # Discover Windows boot
+      configurationLimit = 10;  # Generations kept in boot
     };
-    efi.canTouchEfiVariables = true;
+    # systemd-boot.enable = true;
   };
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "pluto"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -141,6 +141,16 @@
   # services.xserver.libinput.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Automatic garbage collection
+  # nix.gc = {
+  #   automatic = true;
+  #   dates = "weekly";
+  #   options = "--delete-older-than 1w";
+  # };
+
+  # Optimise storage, same as `nix-store --optimise`
+  # nix.settings.auto-optimise-store = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.borisp = {

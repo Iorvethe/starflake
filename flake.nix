@@ -1,5 +1,5 @@
 {
-  description = "My pretty little NixOS flake";
+  description = "Stellar NixOS flake configuration";
 
   inputs = {
     # NixOS official package source
@@ -8,7 +8,7 @@
     # Hardware configuration
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
-    # Home manager, for user files management
+    # User files management
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +17,6 @@
     # TODO: fix firefox addons
     # nur.url = "github:nix-community/NUR";
   };
-
 
   outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }@inputs: {
     # Configuration for `pluto` machine
