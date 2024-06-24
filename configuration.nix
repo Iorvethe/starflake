@@ -176,6 +176,7 @@
     ];
   };
 
+  # environment.variables.SHELL = "fish";
   # environment.variables.EDITOR = "hx";
   programs.kdeconnect.enable = true;
 

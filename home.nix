@@ -5,6 +5,18 @@
   home.username = "borisp";
   home.homeDirectory = "/home/borisp";
 
+  home.sessionVariables = {
+    SHELL = "fish";
+  };
+
+  systemd.user.settings.Manager.DefaultEnvironment = {
+    SHELL = "fish";
+  };
+
+  imports = [
+    ./home
+  ];
+
   # Packages
   home.packages = with pkgs; [
     kdePackages.akonadi
@@ -95,27 +107,8 @@
   #   enable = true;
   # };
 
-  programs.git = {
-    enable = true;
-    userName = "Boris Petrov";
-    userEmail = "boris.v.petrov@proton.me";
-  };
-
-  programs.jujutsu = {
-    enable = true;
-    settings = {
-      user = {
-        name = "Boris Petrov";
-        email = "boris.v.petrov@proton.me";
-      };
-    };
-  };
-
   programs.fish = {
     enable = true;
-    shellAbbrs = {
-      g = "git";
-    };
   };
 
   programs.zoxide = {
@@ -164,6 +157,19 @@
       };
     };
   };
+
+  # programs.alacritty = {
+  #   enable = true;
+  #   # TODO convert it via $SHELL
+  #   settings = {
+  #     shell = "fish";
+  #   };
+  # };
+
+  # programs.starship = {
+  #   enable = true;
+  #   enableFishIntegration = true;
+  # };
 
   # home.filec
 

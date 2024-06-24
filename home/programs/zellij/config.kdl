@@ -1,0 +1,13 @@
+// Appearance
+default-layout "compact"
+simplified_ui true
+ui {
+	pane_frames {
+		rounded_corners true
+	}
+}
+
+// Behaviour
+default-shell "fish"
+on_force_close "detach"
+
