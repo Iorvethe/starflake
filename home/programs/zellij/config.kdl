@@ -1,4 +1,5 @@
 // Appearance
+theme "rose-pine-moon"
 default-layout "compact"
 simplified_ui true
 ui {
