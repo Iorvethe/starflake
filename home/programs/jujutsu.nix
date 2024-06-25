@@ -10,7 +10,7 @@ let
     jl = "jj log";
     jsq = "jj squash";
     jn = "jj new";
-    jnm = "jj new -m ";
+    jnm = "jj new -m";
     jc = "jj commit";
     jcm = "jj commit -m";
   };
