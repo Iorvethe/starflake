@@ -18,7 +18,7 @@ in {
     settings = {
       import = ["~/.config/alacritty/themes/rose-pine-moon.toml"];
       cursor.style = {
-        blinking = "Always";
+        # blinking = "Always";
         shape = "Beam";
       };
       mouse.hide_when_typing = true;
