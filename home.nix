@@ -27,6 +27,7 @@
     neofetch
     keepassxc
     pixelorama
+    just
   ];
 
   # FIXME: plasma and extensions don’t work
@@ -157,14 +158,6 @@
       };
     };
   };
-
-  # programs.alacritty = {
-  #   enable = true;
-  #   # TODO convert it via $SHELL
-  #   settings = {
-  #     shell = "fish";
-  #   };
-  # };
 
   # programs.starship = {
   #   enable = true;

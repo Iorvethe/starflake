@@ -1,5 +1,10 @@
 { pkgs, ... }:
-{
+
+let
+  shellAliases = {
+    cat = "bat";
+  };
+in {
   programs.bat.enable = true;
 
   programs.bat.themes = {
@@ -17,4 +22,7 @@
   programs.bat.config = {
     theme = "rose-pine";
   };
+
+  # Prefer abbreviations for fish
+  programs.fish.shellAbbrs = shellAliases;
 }

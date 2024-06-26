@@ -160,9 +160,6 @@
     packages = with pkgs; [
       kdePackages.kate
       # kdePackages.kdeconnect-kde
-      # git
-      # jujutsu
-      # helix
       godot_4
 
       # Discord with screen sharing on Wayland
@@ -176,8 +173,6 @@
     ];
   };
 
-  # environment.variables.SHELL = "fish";
-  # environment.variables.EDITOR = "hx";
   programs.kdeconnect.enable = true;
 
   # Install firefox.
@@ -249,6 +244,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
       wl-clipboard
+      # llvmPackages_18.libcxxClang
+      # clang-tools_18
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
