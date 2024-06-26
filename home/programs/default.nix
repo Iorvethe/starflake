@@ -3,6 +3,7 @@
 {
   imports = [
     ./alacritty.nix
+    ./direnv.nix
     ./bat.nix
     ./eza.nix
     ./fish

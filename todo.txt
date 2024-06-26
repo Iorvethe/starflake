@@ -5,7 +5,6 @@
 - Add rounded korners
 - Automate commiting and such
 - Configure bash from hm
-- Configure direnv
 - Configure firefox
 - Configure kde plasma
 - Configure starship
@@ -16,3 +15,4 @@
 - Move home-manager to home
 - Move kde-connect to home manager
 - Nerd font iosevka
+- Setup ssh key
