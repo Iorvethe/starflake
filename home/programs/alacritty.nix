@@ -18,14 +18,16 @@ in {
     settings = {
       import = ["~/.config/alacritty/themes/rose-pine-moon.toml"];
       cursor.style = {
-        # blinking = "Always";
         shape = "Beam";
       };
       mouse.hide_when_typing = true;
       shell = {
-        program = "fish";
-        # program = "zellij";
-        # args = [ "-l" "welcome" ];
+        # program = "fish";
+        program = "zellij";
+        args = [ "-l" "welcome" ];
+      };
+      font = {
+        normal.family = "IosevkaTerm Nerd Font";
       };
     };
   };

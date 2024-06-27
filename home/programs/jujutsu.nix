@@ -22,6 +22,8 @@ in {
         name = "Boris Petrov";
         email = "boris.v.petrov@proton.me";
       };
+      # Ideally would use :builtin, but needs to have option to not page if enough space
+      ui.pager = "less -FRX";
     };
   };
 

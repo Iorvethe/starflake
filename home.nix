@@ -28,7 +28,12 @@
     keepassxc
     pixelorama
     just
+    qbittorrent
+    calibre
+    # (nerdfonts.override { fonts = [ "Iosevka" ]; })
   ];
+
+  fonts.fontconfig.enable = false;
 
   # FIXME: plasma and extensions don’t work
   # programs.firefox = {

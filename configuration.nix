@@ -244,10 +244,15 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
       wl-clipboard
+      unrar # For cbz on okular
       # llvmPackages_18.libcxxClang
       # clang-tools_18
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
+  ];
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "IosevkaTerm" ]; })
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
