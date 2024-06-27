@@ -8,6 +8,7 @@
     ./eza.nix
     ./fish
     ./git.nix
+    ./helix
     ./jujutsu.nix
     ./zellij
   ];
