@@ -7,10 +7,12 @@
 
   home.sessionVariables = {
     SHELL = "fish";
+    EDITOR = "hx";
   };
 
   systemd.user.settings.Manager.DefaultEnvironment = {
     SHELL = "fish";
+    EDITOR = "hx";
   };
 
   imports = [
@@ -111,20 +113,6 @@
 
   # programs.thunderbird = {
   #   enable = true;
-  # };
-
-  # programs.fish = {
-  #   enable = true;
-  # };
-
-  programs.zoxide = {
-    enable = true;
-    enableFishIntegration = true;
-  };
-
-  # programs.starship = {
-  #   enable = true;
-  #   enableFishIntegration = true;
   # };
 
   # home.filec

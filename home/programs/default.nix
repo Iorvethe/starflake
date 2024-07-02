@@ -3,14 +3,15 @@
 {
   imports = [
     ./alacritty.nix
-    ./direnv.nix
     ./bat.nix
+    ./direnv.nix
     ./eza.nix
     ./fish
     ./git.nix
     ./helix
     ./jujutsu.nix
     ./zellij
+    ./zoxide.nix
   ];
 }
 

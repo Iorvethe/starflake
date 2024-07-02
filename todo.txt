@@ -14,5 +14,3 @@
 - Learn about nix dev envs
 - Move home-manager to home
 - Move kde-connect to home manager
-- Nerd font iosevka
-- Setup ssh key
