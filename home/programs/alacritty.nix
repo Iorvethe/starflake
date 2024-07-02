@@ -29,6 +29,13 @@ in {
       font = {
         normal.family = "IosevkaTerm Nerd Font";
       };
+      window = {
+        padding = {
+          x = 5;
+          y = 5;
+        };
+        dynamic_padding = true;
+      };
     };
   };
 }

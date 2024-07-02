@@ -43,7 +43,28 @@
 
     extraPackages = with pkgs; [
       nil # Nix
-      # tinymist # Typst
+      tinymist # Typst
     ];
+
+    languages = {
+      language = [
+        {
+          name = "typst";
+          auto-format = true;
+          language-servers = [ "tinymist" ];
+        }
+      ];
+      language-server.tinymist = {
+        command = "tinymist";
+        # See https://myriad-dreamin.github.io/tinymist/configurations.html
+        config = {
+          exportPdf = "never";
+          semanticTokens = "disable";
+          compileStatus = "disable";
+          formatterMode = "typstyle";
+          formatterPrintWidth = 80;
+        };
+      };
+    };
   };
 }

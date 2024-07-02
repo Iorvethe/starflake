@@ -14,14 +14,27 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # KDE Plasma configuration
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      # url = "path:/home/borisp/Dev/oss/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
     # TODO: fix firefox addons
     # nur.url = "github:nix-community/NUR";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }@inputs: {
-    # Configuration for `pluto` machine
-    nixosConfigurations.pluto = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, plasma-manager, ... }@inputs:
+  let
+    username = "borisp";
+    system = "x86_64-linux";
+  in
+  {
+    # Configuration for `saturn` machine
+    nixosConfigurations.saturn = nixpkgs.lib.nixosSystem {
+      inherit system;
       modules = [
         # Hardware configuration
         nixos-hardware.nixosModules.lenovo-legion-15arh05h
@@ -35,7 +48,11 @@
             useGlobalPkgs = true;
             useUserPackages = true;
 
-            users.borisp = import ./home.nix;
+            sharedModules = [
+              plasma-manager.homeManagerModules.plasma-manager
+            ];
+
+            users."${username}" = import ./home.nix;
           };
         }
       ];

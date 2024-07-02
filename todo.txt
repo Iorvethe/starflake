@@ -1,8 +1,6 @@
-- Add akonadi
+// - Add akonadi
 - Add librewolf
-- Add pollonium
-- Add qbittorrent
-- Add rounded korners
+// - Add rounded korners
 - Automate commiting and such
 - Configure bash from hm
 - Configure firefox

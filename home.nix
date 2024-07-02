@@ -1,19 +1,20 @@
 { config, pkgs, ... }:
-
+let
+  environmentVariables = {
+    SHELL = "fish";
+    EDITOR = "hx";
+  };
+in
 {
   # User details
   home.username = "borisp";
   home.homeDirectory = "/home/borisp";
 
-  home.sessionVariables = {
-    SHELL = "fish";
-    EDITOR = "hx";
-  };
+  # For TUI programs
+  home.sessionVariables = environmentVariables;
 
-  systemd.user.settings.Manager.DefaultEnvironment = {
-    SHELL = "fish";
-    EDITOR = "hx";
-  };
+  # For GUI programs
+  systemd.user.settings.Manager.DefaultEnvironment = environmentVariables;
 
   imports = [
     ./home
@@ -21,21 +22,63 @@
 
   # Packages
   home.packages = with pkgs; [
-    kdePackages.akonadi
-    kdePackages.kdepim-runtime
-    kdePackages.kaccounts-providers
-    kdePackages.kaccounts-integration
-    kdePackages.qtwebengine
+    # CLI
     neofetch
-    keepassxc
-    pixelorama
     just
-    qbittorrent
+    julia
+    wl-clipboard
+
+    # Security
+    keepassxc
+
+    # E-books
     calibre
-    # (nerdfonts.override { fonts = [ "Iosevka" ]; })
+    foliate
+
+    # Graphics
+    blender
+    haruna
+    godot_4
+
+    # Social
+    vesktop # Discord with screen sharing on Wayland
+
+    # Cloud
+    nextcloud-client
+
+    # Learning
+    anki
+
+    # KDE packages
+    kdePackages.qtmultimedia # For fokus
+    kdePackages.filelight
+    kdePackages.ktorrent
+    kdePackages.isoimagewriter
+
+    # Download
+    yt-dlp
+
+
+#     kdePackages.akonadi
+#     kdePackages.kdepim-runtime
+#     kdePackages.kaccounts-providers
+#     kdePackages.kaccounts-integration
+#     kdePackages.qtwebengine # For online accounts
+#     kdePackages.filelight
+#     kdePackages.ktorrent
+#     nextcloud-client
+
+#     pixelorama
+    # qbittorrent
+    # kde-rounded-corners
+
+    # Photography
+    # kdePackages.kamera
+#     digikam
+#     exiftool
   ];
 
-  fonts.fontconfig.enable = false;
+#   fonts.fontconfig.enable = false;
 
   # FIXME: plasma and extensions don’t work
   # programs.firefox = {
@@ -110,6 +153,16 @@
    #   };
    # };
 
+  programs.nix-index = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
+  # xdg.mimeApps.defaultApplications = {
+  #   "application/epub+zip" = [ "com.github.johnfactotum.Foliate.desktop" ];
+  #   "x-mobipocket-ebook" = [ "com.github.johnfactotum.Foliate.desktop" ];
+  #   "vnd.amazon.mobi8-ebook" = [ "com.github.johnfactotum.Foliate.desktop" ];
+  # };
 
   # programs.thunderbird = {
   #   enable = true;

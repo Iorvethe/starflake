@@ -23,7 +23,9 @@
     # systemd-boot.enable = true;
   };
 
-  networking.hostName = "pluto"; # Define your hostname.
+  boot.tmp.cleanOnBoot = true;
+
+  networking.hostName = "saturn"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -34,10 +36,23 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
+  # time.timeZone = "Europe/Sofia";
   time.timeZone = "Europe/Brussels";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "fr_BE.UTF-8";
+    LC_IDENTIFICATION = "fr_BE.UTF-8";
+    LC_MEASUREMENT = "fr_BE.UTF-8";
+    LC_MONETARY = "fr_BE.UTF-8";
+    LC_NAME = "fr_BE.UTF-8";
+    LC_NUMERIC = "fr_BE.UTF-8";
+    LC_PAPER = "fr_BE.UTF-8";
+    LC_TELEPHONE = "fr_BE.UTF-8";
+    LC_TIME = "fr_BE.UTF-8";
+  };
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -143,14 +158,16 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Automatic garbage collection
-  # nix.gc = {
-  #   automatic = true;
-  #   dates = "weekly";
-  #   options = "--delete-older-than 1w";
-  # };
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
+  };
 
   # Optimise storage, same as `nix-store --optimise`
-  # nix.settings.auto-optimise-store = true;
+  nix.settings.auto-optimise-store = true;
+
+  # services.ntp.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.borisp = {
@@ -159,16 +176,15 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
-      # kdePackages.kdeconnect-kde
-      godot_4
+#       godot_4
 
       # Discord with screen sharing on Wayland
-      vesktop
+#       vesktop
       # discord
       # xwaylandvideobridge
       # webcord
 
-      haruna
+#       haruna
     #  thunderbird
     ];
   };
@@ -209,7 +225,7 @@
       #   Remove = ["Google"];
       # };
       ExtensionSettings = {
-        "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+        # "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
         # uBlock Origin:
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
@@ -230,9 +246,18 @@
           install_url = "https://addons.mozilla.org/en-US/firefox/addon/plasma-integration/latest.xpi";
           installation_mode = "force_installed";
         };
+        # # Augmented steam:
+        # "uBlock0@raymondhill.net" = {
+        #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+        #   installation_mode = "force_installed";
+        # };
       };
     };
 
+  };
+
+  programs.kdeconnect = {
+    enable = true;
   };
 
   # Allow unfree packages
@@ -241,14 +266,16 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-      wl-clipboard
-      unrar # For cbz on okular
+#       kdePackages.kamera
+#       wl-clipboard
+#       unrar # For cbz on okular
       # llvmPackages_18.libcxxClang
       # clang-tools_18
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
 
+  # Fonts configuration
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "IosevkaTerm" ]; })
   ];

@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./kdeconnect.nix
+    # ./kdeconnect.nix
   ];
 }
 
