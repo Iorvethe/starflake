@@ -173,8 +173,6 @@
     ];
   };
 
-  programs.kdeconnect.enable = true;
-
   # Install firefox.
   programs.firefox = {
     enable = true;
