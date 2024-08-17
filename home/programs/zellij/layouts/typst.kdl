@@ -1,0 +1,33 @@
+// Layout for writing Typst documents
+
+layout {
+	default_tab_template {
+		children
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+	}
+
+	// Editing the document
+	tab name="Editing" hide_floating_panes=true focus=true {
+		pane command="hx"
+		floating_panes {
+			pane command="typst" {
+				args "watch"
+			}
+		}
+	}
+
+	// Commiting to VCS
+	tab name="Commiting" split_direction="vertical" {
+		pane command="jj" {
+			args "diff"
+		}
+		pane split_direction="horizontal" {
+			pane command="jj" {
+				args "log"
+			}
+			pane
+		}
+	}
+}

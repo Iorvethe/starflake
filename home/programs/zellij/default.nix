@@ -26,5 +26,17 @@ in {
   # Prefer abbreviations for fish
   programs.fish.shellAbbrs = shellAliases;
 
-  xdg.configFile."zellij/config.kdl".source = ./config.kdl;
+  xdg.configFile = {
+    "zellij/config.kdl".source = ./config.kdl;
+    "zellij/layouts" = {
+        source = ./layouts;
+        recursive = true;
+    };
+  };
+
+  # xdg.configFile."zellij/config.kdl".source = ./config.kdl;
+  # xdg.configFile."zellij/layouts" = {
+  #   source = ./layouts;
+  #   recursive = true;
+  # };
 }

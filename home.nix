@@ -36,6 +36,7 @@ in
     foliate
 
     # Graphics
+    inkscape
     blender
     haruna
     godot_4
@@ -55,6 +56,7 @@ in
     kdePackages.ktorrent
     kdePackages.isoimagewriter
     kdePackages.neochat
+    kdePackages.skanpage
 
     # Download
     yt-dlp
@@ -67,13 +69,8 @@ in
 #     kdePackages.kaccounts-providers
 #     kdePackages.kaccounts-integration
 #     kdePackages.qtwebengine # For online accounts
-#     kdePackages.filelight
-#     kdePackages.ktorrent
-#     nextcloud-client
 
 #     pixelorama
-    # qbittorrent
-    # kde-rounded-corners
 
     # Photography
     # kdePackages.kamera
