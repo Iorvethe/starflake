@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 let
   environmentVariables = {
     SHELL = "fish";
@@ -54,10 +54,13 @@ in
     kdePackages.filelight
     kdePackages.ktorrent
     kdePackages.isoimagewriter
+    kdePackages.neochat
 
     # Download
     yt-dlp
 
+    # Research
+    pkgs-unstable.zotero
 
 #     kdePackages.akonadi
 #     kdePackages.kdepim-runtime

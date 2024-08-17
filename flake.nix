@@ -5,6 +5,9 @@
     # NixOS official package source
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
+    # Unstable nixpkgs
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     # Hardware configuration
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
@@ -26,7 +29,14 @@
     # nur.url = "github:nix-community/NUR";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, plasma-manager, ... }@inputs:
+  outputs = inputs@{
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    nixos-hardware,
+    home-manager,
+    plasma-manager,
+    ... }:
   let
     username = "borisp";
     system = "x86_64-linux";
@@ -35,6 +45,13 @@
     # Configuration for `saturn` machine
     nixosConfigurations.saturn = nixpkgs.lib.nixosSystem {
       inherit system;
+
+      # specialArgs = {
+      #   pkgs-unstable = import nixpkgs-unstable {
+      #     inherit system;
+      #   };
+      # };
+
       modules = [
         # Hardware configuration
         nixos-hardware.nixosModules.lenovo-legion-15arh05h
@@ -53,6 +70,12 @@
             ];
 
             users."${username}" = import ./home.nix;
+
+            extraSpecialArgs = {
+              pkgs-unstable = import nixpkgs-unstable {
+                inherit system;
+              };
+            };
           };
         }
       ];
