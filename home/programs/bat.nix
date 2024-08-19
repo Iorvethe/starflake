@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ themes, ... }:
 
 let
   shellAliases = {
@@ -9,12 +9,7 @@ in {
 
   programs.bat.themes = {
     rose-pine = {
-      src = pkgs.fetchFromGitHub {
-        owner = "rose-pine";
-        repo = "tm-theme";
-        rev = "c4235f9a65fd180ac0f5e4396e3a86e21a0884ec";
-        hash = "sha256-jji8WOKDkzAq8K+uSZAziMULI8Kh7e96cBRimGvIYKY=";
-      };
+      src = themes.bat;
       file = "dist/themes/rose-pine-moon.tmTheme";
     };
   };

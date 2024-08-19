@@ -25,6 +25,26 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    alacrittyTheme = {
+      url = "github:rose-pine/alacritty";
+      flake = false;
+    };
+
+    batTheme = {
+      url = "github:rose-pine/tm-theme";
+      flake = false;
+    };
+
+    fishTheme = {
+      url = "github:rose-pine/fish";
+      flake = false;
+    };
+
+    zellijTheme = {
+      url = "github:rose-pine/zellij";
+      flake = false;
+    };
+
     # TODO: fix firefox addons
     # nur.url = "github:nix-community/NUR";
   };
@@ -36,6 +56,10 @@
     nixos-hardware,
     home-manager,
     plasma-manager,
+    alacrittyTheme,
+    batTheme,
+    fishTheme,
+    zellijTheme,
     ... }:
   let
     username = "borisp";
@@ -74,6 +98,12 @@
             extraSpecialArgs = {
               pkgs-unstable = import nixpkgs-unstable {
                 inherit system;
+              };
+              themes = {
+                alacritty = alacrittyTheme;
+                bat = batTheme;
+                fish = fishTheme;
+                zellij = zellijTheme;
               };
             };
           };

@@ -1,5 +1,53 @@
 {
   "nodes": {
+    "alacrittyTheme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1689254175,
+        "narHash": "sha256-LU8H4e5bzCevaabDgVmbWoiVq7iJ4C1VfQrWGpRwLq0=",
+        "owner": "rose-pine",
+        "repo": "alacritty",
+        "rev": "3c3e36eb5225b0eb6f1aa989f9d9e783a5b47a83",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rose-pine",
+        "repo": "alacritty",
+        "type": "github"
+      }
+    },
+    "batTheme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1713871459,
+        "narHash": "sha256-jji8WOKDkzAq8K+uSZAziMULI8Kh7e96cBRimGvIYKY=",
+        "owner": "rose-pine",
+        "repo": "tm-theme",
+        "rev": "c4235f9a65fd180ac0f5e4396e3a86e21a0884ec",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rose-pine",
+        "repo": "tm-theme",
+        "type": "github"
+      }
+    },
+    "fishTheme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663356772,
+        "narHash": "sha256-bSGGksL/jBNqVV0cHZ8eJ03/8j3HfD9HXpDa8G/Cmi8=",
+        "owner": "rose-pine",
+        "repo": "fish",
+        "rev": "38aab5baabefea1bc7e560ba3fbdb53cb91a6186",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rose-pine",
+        "repo": "fish",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -94,11 +142,31 @@
     },
     "root": {
       "inputs": {
+        "alacrittyTheme": "alacrittyTheme",
+        "batTheme": "batTheme",
+        "fishTheme": "fishTheme",
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
-        "plasma-manager": "plasma-manager"
+        "plasma-manager": "plasma-manager",
+        "zellijTheme": "zellijTheme"
+      }
+    },
+    "zellijTheme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1704961652,
+        "narHash": "sha256-VNqd1Qt6LibK7M8KirUhtwpVYAvsgn2e96wAf/YMQzI=",
+        "owner": "rose-pine",
+        "repo": "zellij",
+        "rev": "53835422f965e6c88b9ad59e11d343ca4552bf6d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rose-pine",
+        "repo": "zellij",
+        "type": "github"
       }
     }
   },
