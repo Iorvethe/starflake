@@ -158,6 +158,8 @@ in
     enableFishIntegration = true;
   };
 
+  home.file.".XCompose".source = ./XCompose;
+
   # xdg.mimeApps.defaultApplications = {
   #   "application/epub+zip" = [ "com.github.johnfactotum.Foliate.desktop" ];
   #   "x-mobipocket-ebook" = [ "com.github.johnfactotum.Foliate.desktop" ];
