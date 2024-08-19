@@ -7,8 +7,7 @@ let
     hash = "sha256-bSGGksL/jBNqVV0cHZ8eJ03/8j3HfD9HXpDa8G/Cmi8=";
   };
 in {
-  # TODO: change to xdg
-  home.file.".config/fish/themes" = {
+  xdg.configFile."fish/themes" = {
     recursive = true;
     source = "${src}/themes";
   };

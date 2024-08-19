@@ -8,8 +8,7 @@ let
     hash = "sha256-LU8H4e5bzCevaabDgVmbWoiVq7iJ4C1VfQrWGpRwLq0=";
   };
 in {
-  # TODO: change to xdg
-  home.file.".config/alacritty/themes" = {
+  xdg.configFile."alacritty/themes" = {
     recursive = true;
     source = "${src}/dist";
   };

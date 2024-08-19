@@ -14,11 +14,6 @@ let
     zw = "zellij -l welcome";
   };
 in {
-  home.file.".config/zellij/themes" = {
-    recursive = true;
-    source = "${src}/dist";
-  };
-
   programs.zellij = {
     enable = true;
   };
@@ -28,15 +23,13 @@ in {
 
   xdg.configFile = {
     "zellij/config.kdl".source = ./config.kdl;
+    "zellij/themes" = {
+      source = "${src}/dist";
+      recursive = true;
+    };
     "zellij/layouts" = {
         source = ./layouts;
         recursive = true;
     };
   };
-
-  # xdg.configFile."zellij/config.kdl".source = ./config.kdl;
-  # xdg.configFile."zellij/layouts" = {
-  #   source = ./layouts;
-  #   recursive = true;
-  # };
 }
