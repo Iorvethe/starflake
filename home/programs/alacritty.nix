@@ -14,9 +14,9 @@
       };
       mouse.hide_when_typing = true;
       shell = {
-        # program = "fish";
-        program = "zellij";
-        args = [ "-l" "welcome" ];
+        program = "fish";
+        # program = "zellij";
+        # args = [ "-l" "welcome" ];
       };
       font = {
         normal.family = "IosevkaTerm Nerd Font";

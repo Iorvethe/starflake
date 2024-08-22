@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, pkgs-unstable, ...}:
 {
   programs.helix = {
     enable = true;
@@ -43,7 +43,7 @@
 
     extraPackages = with pkgs; [
       nil # Nix
-      tinymist # Typst
+      pkgs-unstable.tinymist # Typst
     ];
 
     languages = {
