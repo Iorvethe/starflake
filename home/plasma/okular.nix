@@ -1,26 +1,3 @@
-# {
-#   programs.plasma.configFile."okularpartrc" = {
-
-#     "Core Performance" = {
-#       MemoryLevel = "Aggressive";
-#     };
-
-#     "Dlg Accessibility" = {
-#       # From Rosé Pine, base of Moon and Dawn
-#       RecolorBackground="35,33,54";
-#       RecolorForeground="250,244,237";
-#     };
-
-#     "Document" = {
-#       RenderMode="Recolor";
-#     };
-
-#     "General" = {
-#       ShellOpenFileInTabs=true;
-#     };
-#   };
-# }
-
 {
   programs.okular = {
     enable = true;
@@ -44,7 +21,3 @@
     };
   };
 }
-
-# {
-  
-# }

@@ -15,6 +15,7 @@
 
     functions = {
       mkcd = "mkdir $argv[1] && cd $argv[1]";
+      conf = "cd ~/Starflake && zellij -l system-config";
     };
   };
 }

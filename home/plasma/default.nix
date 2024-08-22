@@ -4,6 +4,7 @@
     # ./polonium.nix
 #     ./krohnkite.nix
 #     ./rounded_corners.nix
+    ./startup.nix
     ./okular.nix
   ];
 

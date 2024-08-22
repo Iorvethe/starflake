@@ -36,6 +36,7 @@ in
     foliate
 
     # Graphics
+    krita
     inkscape
     blender
     haruna
@@ -57,6 +58,7 @@ in
     kdePackages.isoimagewriter
     kdePackages.neochat
     kdePackages.skanpage
+    kdePackages.kdenlive
 
     # Download
     yt-dlp
