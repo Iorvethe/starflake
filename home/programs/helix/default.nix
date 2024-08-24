@@ -42,8 +42,18 @@
     };
 
     extraPackages = with pkgs; [
-      nil # Nix
-      pkgs-unstable.tinymist # Typst
+      # Nix
+      nil
+
+      # Typst
+      pkgs-unstable.tinymist
+
+      # Python
+      # See: https://github.com/NixOS/nixpkgs/issues/229337
+      (python3.withPackages (p: (with p; [
+        python-lsp-server
+        python-lsp-ruff
+      ])))
     ];
 
     languages = {
