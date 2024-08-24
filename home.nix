@@ -41,6 +41,7 @@ in
     blender
     haruna
     godot_4
+    rnote
 
     # Social
     vesktop # Discord with screen sharing on Wayland
