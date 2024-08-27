@@ -67,6 +67,9 @@ in
     # Research
     pkgs-unstable.zotero
 
+    # Office
+    libreoffice
+
 #     kdePackages.akonadi
 #     kdePackages.kdepim-runtime
 #     kdePackages.kaccounts-providers
