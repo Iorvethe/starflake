@@ -1,7 +1,9 @@
 // Appearance
 theme "rose-pine-moon"
-default-layout "compact"
+
 simplified_ui true
+pane_frames false
+
 ui {
 	pane_frames {
 		rounded_corners true
@@ -11,4 +13,18 @@ ui {
 // Behaviour
 default-shell "fish"
 on_force_close "detach"
+copy_command "wl-copy"
+session_serialization false
 
+keybinds {
+	// Used in Helix for TS motions
+	unbind "Alt o" "Alt i" "Alt p" "Alt n" "Ctrl o"
+
+	session {
+		bind "Ctrl à" { SwitchToMode "Normal"; }
+	}
+
+    shared_except "session" "locked" {
+        bind "Ctrl é" { SwitchToMode "Session"; }
+    }
+}

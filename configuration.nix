@@ -24,6 +24,9 @@
   };
 
   boot.tmp.cleanOnBoot = true;
+  boot.extraModulePackages = [
+    config.boot.kernelPackages.lenovo-legion-module
+  ];
 
   networking.hostName = "saturn"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

@@ -63,6 +63,11 @@
       };
     };
 
+    krunner = {
+      position = "center";
+      historyBehavior = "enableAutoComplete";
+    };
+
     configFile = {
 
       kwinrc = {

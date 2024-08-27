@@ -1,7 +1,7 @@
 { themes, ... }:
 let
   shellAliases = {
-    zj = "zellij";
+    zl = "zellij";
     za = "zellij attach";
     ze = "zellij edit -i";
     zr = "zellij run -is";

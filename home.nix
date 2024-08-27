@@ -61,6 +61,13 @@ in
     kdePackages.skanpage
     kdePackages.kdenlive
 
+    # For spellchecking
+    aspell
+    aspellDicts.fr
+    aspellDicts.en
+    aspellDicts.en-computers
+    aspellDicts.en-science
+
     # Download
     yt-dlp
 
@@ -69,6 +76,12 @@ in
 
     # Office
     libreoffice
+
+    # LSP servers
+    clang-tools
+
+    # Legion
+    # lenovo-legion
 
 #     kdePackages.akonadi
 #     kdePackages.kdepim-runtime
