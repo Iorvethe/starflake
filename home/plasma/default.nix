@@ -103,6 +103,9 @@
       # Alacritty as terminal
       "services/Alacritty.desktop"."New" = "Ctrl+Alt+T";
       "services/org.kde.konsole.desktop"."_launch" = [ ];
+
+      # Windows management
+      "kwin"."Window Maximize" = "Meta+M";
     };
   };
 }

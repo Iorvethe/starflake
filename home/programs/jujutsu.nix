@@ -3,7 +3,7 @@ let
     jb = "jj branch";
     jd = "jj diff";
     jds = "jj describe";
-    js = "jj status";
+    jst = "jj status";
     jg = "jj git";
     jgf = "jj git fetch";
     jgp = "jj git push";
