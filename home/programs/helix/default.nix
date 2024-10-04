@@ -54,6 +54,9 @@
         python-lsp-server
         python-lsp-ruff
       ])))
+
+      # Markdown
+      marksman
     ];
 
     languages = {
