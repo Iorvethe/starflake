@@ -80,6 +80,9 @@ in
     # LSP servers
     clang-tools
 
+    # Archiving
+    p7zip
+
     # Legion
     # lenovo-legion
 
