@@ -62,12 +62,17 @@ in
     kdePackages.kdenlive
     kdePackages.kdepim-addons # For calendar integration to clock
 
-    # For spellchecking
+    # For spellchecking in KDE
     aspell
     aspellDicts.fr
     aspellDicts.en
     aspellDicts.en-computers
     aspellDicts.en-science
+
+    # For spell checking in Thunderbird
+    hunspell
+    hunspellDicts.en_US
+    hunspellDicts.fr-moderne
 
     # Download
     yt-dlp

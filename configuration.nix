@@ -127,6 +127,9 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Need for hunspell (I guess?)
+  programs.dconf.enable = true;
+
   programs.kde-pim = {
     enable = true;
     merkuro = true;
