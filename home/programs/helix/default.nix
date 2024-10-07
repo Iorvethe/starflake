@@ -74,7 +74,7 @@
           exportPdf = "never";
           semanticTokens = "disable";
           compileStatus = "disable";
-          formatterMode = "typstyle";
+          formatterMode = "disable";
           formatterPrintWidth = 80;
         };
       };
