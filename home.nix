@@ -60,6 +60,7 @@ in
     kdePackages.neochat
     kdePackages.skanpage
     kdePackages.kdenlive
+    kdePackages.kdepim-addons # For calendar integration to clock
 
     # For spellchecking
     aspell

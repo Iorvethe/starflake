@@ -127,6 +127,11 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  programs.kde-pim = {
+    enable = true;
+    merkuro = true;
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "fr";
