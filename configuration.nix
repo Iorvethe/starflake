@@ -292,6 +292,7 @@
 
   # Fonts configuration
   fonts.packages = with pkgs; [
+    libertinus
     (nerdfonts.override { fonts = [ "IosevkaTerm" ]; })
   ];
 
