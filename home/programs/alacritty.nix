@@ -14,8 +14,8 @@
       };
       mouse.hide_when_typing = true;
       shell = {
-        program = "fish";
-        # program = "zellij";
+        # program = "fish";
+        program = "zellij";
         # args = [ "-l" "welcome" ];
       };
       font = {
