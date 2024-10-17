@@ -89,6 +89,9 @@ in
     # Archiving
     p7zip
 
+    # RSS
+    newsflash # TODO: change with akregator
+
     # Legion
     # lenovo-legion
 
