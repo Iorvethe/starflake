@@ -1,6 +1,8 @@
+{pkgs, ...}:
 {
   programs.thunderbird = {
     enable = true;
+    package = pkgs.thunderbird-128;
     profiles.ULB = {
       isDefault = true;
       settings = {

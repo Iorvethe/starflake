@@ -34,6 +34,7 @@ in
     # E-books
     calibre
     foliate
+    pdfarranger
 
     # Graphics
     krita
