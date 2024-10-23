@@ -18,7 +18,7 @@ session_serialization false
 
 keybinds {
 	// Used in Helix for TS motions
-	unbind "Alt o" "Alt i" "Alt p" "Alt n" // "Ctrl o"
+	unbind "Alt o" "Alt i" "Alt p" // "Alt n" // "Ctrl o"
 
 	// session {
 	// 	bind "Ctrl à" { SwitchToMode "Normal"; }

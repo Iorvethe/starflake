@@ -32,6 +32,8 @@
       };
 
       keys.normal = {
+        "A-é" = "select_next_sibling";
+        "’" = "goto_word";
         "C-l" = ":reload-all";
         "space" = {
           "à" = ":write";

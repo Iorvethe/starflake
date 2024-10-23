@@ -30,6 +30,7 @@ in
 
     # Security
     keepassxc
+    # pkgs-unstable.signal-desktop
 
     # E-books
     calibre
