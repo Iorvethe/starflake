@@ -63,6 +63,7 @@ in
     kdePackages.skanpage
     kdePackages.kdenlive
     kdePackages.kdepim-addons # For calendar integration to clock
+    kdePackages.zanshin
 
     # For spellchecking in KDE
     aspell
